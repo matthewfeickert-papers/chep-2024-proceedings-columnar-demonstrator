@@ -1,1 +1,10 @@
-\texttt{bayesian\_pyhf} is a Python package that allows for the parallel Bayesian and frequentist evaluation of multi-channel binned statistical models. The Python library \texttt{pyhf} is used to build such models according to the \texttt{HistFactory} framework and already includes many frequentist inference methodologies. The \texttt{pyhf}-built models are then used as data-generating model for Bayesian inference and evaluated with the Python library \texttt{PyMC}. Based on Monte Carlo Chain Methods, \texttt{PyMC} allows for Bayesian modelling and together with the \texttt{arviz} library offers a wide range of Bayesian analysis tools.
+The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools.
+This project is inspired by the analysis demonstrator from IRIS-HEP.
+The demonstrator employs PHYSLITE OpenData from the ATLAS collaboration, the new Run 3 compact ATLAS analysis data format.
+The tight integration of ROOT features within PHYSLITE presents unique challenges when integrating with the Python analysis ecosystem.
+The demonstrator is constructed from ATLAS PHYSLITE OpenData, ensuring the accessibility and reproducibility of the analysis.
+The analysis pipeline of the demonstrator incorporates a comprehensive suite of tools and libraries.
+These include uproot for data reading, awkward-array for data manipulation, Dask for parallel computing, and hist for histogram processing.
+For the purpose of statistical analysis, the pipeline integrates cabinetry and \texttt{pyhf}, providing a robust toolkit for analysis.
+A significant component of this project is the custom application of corrections, scale factors, and systematic errors using ATLAS software.
+The infrastructure and methodology for these applications will be discussed in detail during the presentation, underscoring the adaptability of the Python ecosystem for high-energy physics analysis.
