@@ -83,7 +83,7 @@ jobs:
         touch _site/index.html
         touch _site/.nojekyll
 
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4
       with:
         name: proceedings
         path: '_site/'
@@ -98,6 +98,9 @@ jobs:
           echo "::warning title=Invalid file permissions automatically fixed::$line"
         done
 
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v5
+      uses: actions/deploy-pages@v4
