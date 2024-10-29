@@ -82,7 +82,9 @@ arXiv: deep_clean text
 
 	# Use cache for minted
 	# c.f. https://github.com/gpoore/minted/issues/113#issuecomment-223451550
-	mv _minted-$(FILENAME) submit_to_arXiv/_minted-ms
+	if [ -d _minted-$(FILENAME) ]; then \
+		mv _minted-$(FILENAME) submit_to_arXiv/_minted-ms; \
+	fi
 	sed -i.bak 's/finalizecache/frozencache/' submit_to_arXiv/latex/packages.tex
 
 	mv submit_to_arXiv/$(FILENAME).tex submit_to_arXiv/ms.tex
