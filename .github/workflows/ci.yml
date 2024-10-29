@@ -2,8 +2,8 @@ name: Deploy PDF
 
 on:
   push:
-    # branches:
-    # - main
+    branches:
+    - main
   pull_request:
   workflow_dispatch:
 
@@ -36,7 +36,7 @@ jobs:
         ls -lhtra
 
     - name: Upload pdf
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-pages-artifact@v3
       with:
         name: proceedings
         path: 'chep_2024_proceedings.pdf'
@@ -56,8 +56,7 @@ jobs:
 
     - name: Upload arXiv archive
       if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
-      # uses: actions/upload-artifact@v4
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: submit_to_arXiv
         path: 'submit_to_arXiv'
