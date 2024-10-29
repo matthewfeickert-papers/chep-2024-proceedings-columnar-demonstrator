@@ -1,0 +1,60 @@
+\documentclass{latex/webofc}
+\input{latex/packages.tex}
+\input{latex/commands.tex}
+%
+\begin{document}
+
+% \linenumbers
+%
+\title{Building a Columnar Analysis Demonstrator for ATLAS PHYSLITE Open Data using the Python Ecosystem}
+
+\author{\firstname{KyungEon} \lastname{Choi}\,\orcidlink{0000-0003-0748-694X}\inst{1} \and
+ \firstname{Matthew} \lastname{Feickert}\,\orcidlink{0000-0003-4124-7862}\inst{2}\fnsep\thanks{Corresponding author \email{matthew.feickert@cern.ch}} \and
+ \firstname{Nikolai} \lastname{Hartmann}\,\orcidlink{0000-0003-0047-2908}\inst{3} \and
+ \firstname{Lukas} \lastname{Heinrich}\,\orcidlink{0000-0002-4048-7584}\inst{4} \and
+ \firstname{Alexander} \lastname{Held}\,\orcidlink{0000-0002-8924-5885}\inst{2} \and
+ \firstname{Evangelos} \lastname{Kourlitis}\,\orcidlink{0000-0001-6568-2047}\inst{4} \and
+ \firstname{Nils} \lastname{Krumnack}\inst{2} \and
+ \firstname{Giordon} \lastname{Stark}\,\orcidlink{0000-0001-6616-3433}\inst{5} \and
+ \firstname{Matthias} \lastname{Vigl}\,\orcidlink{0000-0003-2281-3822}\inst{4} \and
+ \firstname{Gordon} \lastname{Watts}\,\orcidlink{0000-0002-0753-7308}\inst{6}
+ on behalf of the ATLAS Computing Activity
+}
+
+\institute{University of Texas at Austin, Austin, Texas, USA
+ \and
+ University of Wisconsin-Madison, Madison, Wisconsin, USA
+ \and
+ Ludwig Maximilians Universitat, Munich, Germany
+ \and
+ Technical University of Munich, Munich, Germany
+ \and
+ Santa Cruz Institute for Particle Physics, Santa Cruz, California, USA
+ \and
+ University of Washington, Seattle, Washington, USA
+}
+
+\abstract{%
+ \input{src/abstract}
+}
+%
+\maketitle
+%
+
+\input{src/introduction}
+\input{src/conclusions}
+
+
+\section{Acknowledgements}\label{sec:acknowledgements}
+
+Matthew Feickert, Alexander Held, and Gordon Watts are supported by the U.S. National Science Foundation (NSF) under Cooperative Agreement OAC-1836650 and PHY-2323298 (IRIS-HEP).
+Lukas Heinrich and Evangelos Kourlitis are supported by the Excellence Cluster ORIGINS, which is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany's Excellence Strategy - EXC-2094-390783311 and by the German Federal Ministry of Education and Research Project 05H2021 (ErUM-FSP T02) - ``Run 3 von ATLAS am LHC: Analysis Infrastructure for the ATLAS Detektor at the LHC''.
+
+
+% Don't use \bibliographystyle
+% the style is already called in woc.bst, so ensure it is in the top level directory
+\bibliography{bib/ref}
+
+\end{document}
+
+<div id='footer'><table width='100%'><tr><td class='right'><a href='http://fusioninventory.org/'><span class='copyright'>FusionInventory 9.1+1.0 | copyleft <img src='/glpi/plugins/fusioninventory/pics/copyleft.png'/>  2010-2016 by FusionInventory Team</span></a></td></tr></table></div>
