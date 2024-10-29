@@ -1,0 +1,19 @@
+\usepackage[varg]{txfonts}   % Web of Conferences font
+\usepackage{amsmath,bm}
+\usepackage{hyperref}
+\graphicspath{{figures/}}
+\usepackage{listings}
+\RequirePackage{caption}
+\RequirePackage{subcaption}  % Needed for subfigures
+\usepackage[cache=false,newfloat=true,finalizecache]{minted}
+\usepackage[capitalize]{cleveref}% https://ctan.org/pkg/cleveref % Must be loaded after hyperref
+\usepackage{lineno}
+\usepackage{lmodern}% https://www.ctan.org/pkg/lm % Use same fonts as journal submission and match layout
+
+\usemintedstyle{friendly}
+\setminted[python]{}
+
+\hypersetup{bookmarksnumbered=true, bookmarksopen=true, bookmarksopenlevel=0}
+\hypersetup{pdftitle={Bayesian Methodologies with pyhf}, pdfauthor={Matthew Feickert, Lukas Heinrich, Malin Horstman}}
+\hypersetup{colorlinks,breaklinks}
+\hypersetup{linkcolor=blue,citecolor=blue,filecolor=black,urlcolor=blue}

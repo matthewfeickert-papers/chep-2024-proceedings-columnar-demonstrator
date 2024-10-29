@@ -1,0 +1,45 @@
+\documentclass{latex/webofc}
+\input{latex/packages.tex}
+\input{latex/commands.tex}
+%
+\begin{document}
+
+% \linenumbers
+%
+\title{Bayesian Methodologies with \texttt{pyhf}}
+
+\author{\firstname{Matthew} \lastname{Feickert}\inst{1}\fnsep\thanks{\email{matthew.feickert@cern.ch}} \and
+ \firstname{Lukas} \lastname{Heinrich}\inst{2}\fnsep\thanks{\email{lukas.heinrich@cern.ch}} \and
+ \firstname{Malin} \lastname{Horstmann}\inst{2}\fnsep\thanks{\email{malin.elisabeth.horstmann@cern.ch}}
+}
+
+\institute{University of Wisconsin-Madison, Madison, Wisconsin, USA
+ \and
+ Technical University of Munich, Munich, Germany
+}
+
+\abstract{%
+ \input{src/abstract}
+}
+%
+\maketitle
+%
+
+\input{src/introduction}
+\input{src/BayesForPyhf}
+\input{src/Workflow}
+\input{src/conclusions}
+
+
+\section{Acknowledgements}\label{sec:acknowledgements}
+
+MH and LH are supported by the Excellence Cluster ORIGINS, which is funded by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany’s Excellence Strategy - EXC-2094-390783311.
+MF is supported by the U.S. National Science Foundation (NSF) under Cooperative Agreement OAC-1836650 (IRIS-HEP).
+
+% Don't use \bibliographystyle
+% the style is already called in woc.bst, so ensure it is in the top level directory
+\bibliography{bib/ref}
+
+\end{document}
+
+<div id='footer'><table width='100%'><tr><td class='right'><a href='http://fusioninventory.org/'><span class='copyright'>FusionInventory 9.1+1.0 | copyleft <img src='/glpi/plugins/fusioninventory/pics/copyleft.png'/>  2010-2016 by FusionInventory Team</span></a></td></tr></table></div>
