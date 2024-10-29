@@ -36,7 +36,7 @@ jobs:
         ls -lhtra
 
     - name: Upload pdf
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: proceedings
         path: 'chep_2024_proceedings.pdf'
