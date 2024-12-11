@@ -1,14 +1,14 @@
 \section{Introduction}\label{sec:introduction}
 
-As the High Luminosity LHC (HL-LHC) era approaches, the ATLAS experiment~\cite{PERF-2007-01} has been preparing software and computing upgrades to address the challenges and opportunities outlined in the ATLAS Software and Computing HL-LHC Roadmap~\cite{CERN-LHCC-2022-005}.
+As the High Luminosity LHC~\cite{ZurbanoFernandez:2020cco} (HL-LHC) era approaches, the ATLAS experiment~\cite{PERF-2007-01} has created a HL-LHC focused research and development program~\cite{ATLAS:2020pnm} for software and computing upgrades to address the challenges and opportunities outlined in the ATLAS Software and Computing HL-LHC Roadmap~\cite{CERN-LHCC-2022-005}.
 From the 2022 computing model projections, ATLAS does not anticipate being able to store all analysis computations on disk, as even under the ``aggressive'' R\&D scenario, sustained year-on-year budget increases of more than 10\% would be required to meet the disk storage quota required, as seen in~\Cref{fig:atlas-disk-projection}.
 To prepare for this reality, ATLAS has begun to explore strategies of trading disk for compute by performing ``on-the-fly'' computations for analysis quantities when possible, rather than reading them from disk.
-This approach is supported by the design decisions of PHYSLITE --- the common file format for the ATLAS Run 4 Analysis Model~\cite{Schaarschmidt:2024vzr}.
+This approach is supported by the design decisions of PHYSLITE --- the common reduced data format for the ATLAS Run 4 Analysis Model~\cite{Schaarschmidt:2024vzr}.
 PHYSLITE is a monolithic file format --- intended to support around 80\% of all physics analyses in Run 4 --- that contains already-calibrated physics objects for fast analysis, and allows for direct support without the need to create derived ROOT ntuples for analysis.
 
 % The ATLAS experiment is in the process of developing a columnar analysis demonstrator, which takes advantage of the Python ecosystem of data science tools
 
-Great introductions here~\cite{CERN-LHCC-2022-005,nanobind}.
+Great introductions here~\cite{nanobind}.
 
 \begin{figure}
     \centering
