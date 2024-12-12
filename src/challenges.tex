@@ -2,8 +2,8 @@
 
 What becomes a challenge is when all branches of a PHYSLITE file need to be read including branches with custom objects and when systematics need to be handled.
 As columnar analysis processes events in batches, this requires that ATLAS Combined Performance (CP) tools and algorithms must also be able to operate in batches.
-The current model for CP tools is to operate on the ATLAS xAOD event data model (EDM) for all the calculations per event and then to write the systematics to disk for future access.
-This process is I/O intensive, but has been computationally efficient for the current ATLAS analysis model.
+The current Run 3 model for CP tools is to operate on the ATLAS xAOD event data model (EDM) for all the calculations per event and then to write the systematics to disk for future access.
+This process is I/O intensive and computationally inefficient, but has excellent physics performance and configurability for the current ATLAS analysis model.
 The challenge for a fully columnar CP tool framework is to adapt to the on-the-fly computation of the columnar paradigm --- furthering the ``trade disk for compute'' strategy --- while still being performant enough to not be a bottleneck.
 
 This refactoring process ongoing in the ATLAS Analysis Model Group (AMG) has also offered design improvement opportunities to create more Pythonic end-user APIs for the ATLAS CP tools.
