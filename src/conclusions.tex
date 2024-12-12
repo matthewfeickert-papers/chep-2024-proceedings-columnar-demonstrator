@@ -1,3 +1,9 @@
-\section{Conclusions}\label{sec:conclusions}
+\section{Preliminary Performance Tests and Future Work}\label{sec:conclusions}
 
-Great conclusions here.
+During the ongoing refactor added preliminary integrated benchmark to measure time spent in tool per event (not I/O) and compare to xAOD model.
+While direct comparison not possible, tests are as close as possible.
+Only involves \texttt{C++} CP tool code (no Python involved).
+Uses same version of CP tool.
+xAOD includes event store access (per-event overhead, paid per-batch in columnar).
+Show substantial speedups for migrated tools: columnar is 2-4x faster than xAOD interface (EDM access dependent).
+Time for I/O and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark).
