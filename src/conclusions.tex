@@ -1,4 +1,4 @@
-\section{Preliminary Performance Tests and Future Work}\label{sec:conclusions}
+\section{Preliminary Performance Tests and Future Decisions and Work}\label{sec:conclusions}
 
 During the ongoing refactor added preliminary integrated benchmark to measure time spent in tool per event (not I/O) and compare to xAOD model.
 While direct comparison not possible, tests are as close as possible.
@@ -7,3 +7,12 @@ Uses same version of CP tool.
 xAOD includes event store access (per-event overhead, paid per-batch in columnar).
 Show substantial speedups for migrated tools: columnar is 2-4x faster than xAOD interface (EDM access dependent).
 Time for I/O and connecting columns not included in the performance comparisons (not optimized in the tests, so removed from benchmark).
+
+ATLAS CP tools were created 10-15 years ago to run in an analysis framework.
+Battle tested, extremely well understood, excellent physics performance, strong desire to be maintained.
+Rewrite cost is currently too high across collaboration to move to \texttt{correctionlib} paradigm.
+Columnar cracks open ``black box'' implementations of tools for the new analysis model.
+Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration.
+Raises the question: ``What would it take to get to \texttt{python -m pip install atlascp}?''
+Columnar prototype explores these possibilities.
+Steps beyond: Modularization to level that allows packaging with \texttt{scikit-build-core}.
