@@ -14,6 +14,8 @@ The API design ability is quite powerful, as it allows for unification of interf
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{columnar_cp_tools_diagram.png}
-    \caption{X~\cite{Vigl:ACAT_2024}.}
+    \caption{Cartoon of the data interface layers for the Pythonic interface to the columnar CP tools.~\cite{Vigl:ACAT_2024}
+The user is presented with a high-level Pythonic API for operating on columns of PHYSLITE data (e.g. as NumPy or Awkward arrays) that has a similar design to common Python array libraries.
+Through \texttt{nanobind} zero-copy buffers, the data columns are passed directly to the performant \texttt{C++} columnar CP tools for computation, and the results are returned to the user level as transformed arrays.}
     \label{fig:columnar_cp_tools_diagram}
 \end{figure}

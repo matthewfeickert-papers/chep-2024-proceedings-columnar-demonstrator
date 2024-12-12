@@ -11,8 +11,8 @@ These ecosystems of tools build upon and extend the broader Scientific Python ec
 
 The ATLAS Run 4 Analysis Model is built around the PHYSLITE common reduced data format~\cite{Schaarschmidt:2024vzr,SOFT-2022-02}.
 PHYSLITE is a monolithic file format --- intended to support around 80\% of all physics analyses in Run 4 --- that contains already-calibrated physics objects for fast analysis, and allows for direct support without the need to create derived ROOT ntuples for analysis.
-\textbf{\textcolor{red}{Zach's CHEP proceedings need an updated citation.}}
-The demonstrator uses ATLAS PHYSLITE open data~\cite{ATL-OREACH-PROC-2024-005,Marshall:2919097} --- released for research use for the first time in 2024 --- to ensure the accessibility and reproducibility of the technical demonstrator analysis.
+% The demonstrator uses ATLAS PHYSLITE open data~\cite{ATL-OREACH-PROC-2024-005,Marshall:2919097} --- released for research use for the first time in 2024 --- to ensure the accessibility and reproducibility of the technical demonstrator analysis.
+The demonstrator uses ATLAS PHYSLITE open data~\cite{ATL-OREACH-PROC-2024-005} --- released for research use for the first time in 2024 --- to ensure the accessibility and reproducibility of the technical demonstrator analysis.
 PHYSLITE has tight integration with ROOT features, to the extent that raw PHYSLITE is not easily loadable outside of ROOT in general, so integrating with the Python analysis ecosystem presents unique challenges, such as correctly handling ElementLinks and custom objects like triggers.
 The Awkward Array~\cite{Awkward_Array_2018} library supports ``behaviors'' which allows for efficiently reinterpreting data structure on the fly, which can then be used by Uproot~\cite{Uproot_2017} for I/O of custom serializations (e.g. PHYSLITE).
 Through contributions by ATLAS members large amounts of PHYSLITE are now supported by both Uproot and Coffea~\cite{Coffea_2023,CMS:2020kpn} which allows for most workflows to proceed with small alterations.
