@@ -3,6 +3,7 @@
 As the High Luminosity LHC~\cite{ZurbanoFernandez:2020cco} (HL-LHC) era approaches, the ATLAS experiment~\cite{PERF-2007-01} has created a HL-LHC focused research and development program~\cite{ATLAS:2020pnm} for software and computing upgrades to address the challenges and opportunities outlined in the ATLAS Software and Computing HL-LHC Roadmap~\cite{CERN-LHCC-2022-005}.
 From the 2022 computing model projections, ATLAS does not anticipate being able to store all analysis computations on disk, as even under the ``aggressive'' R\&D scenario, sustained year-on-year budget increases of more than 10\% would be required to meet the disk storage quota required, as seen in~\Cref{fig:atlas-disk-projection}.
 To prepare for this reality, ATLAS has begun to explore strategies of trading disk for compute by performing ``on-the-fly'' computations for analysis quantities when possible, rather than reading them from disk.
+As part of this approach, ATLAS has been researching the use of columnar analysis --- array programming for data analysis --- for full analysis workflows, given its compute efficient batch data operations and its applications in different software environments and ecosystems.
 
 \begin{figure}
     \centering
