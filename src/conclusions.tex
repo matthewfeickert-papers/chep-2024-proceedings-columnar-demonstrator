@@ -1,17 +1,14 @@
-\section{Preliminary Performance Tests and Future Decisions and Work}\label{sec:conclusions}
+\section{Future Decisions and Work}\label{sec:conclusions}
 
-During the ongoing refactor for the \texttt{v2} prototype, preliminary integrated benchmarks have been created to measure the time spent in each tool per event (excluding I/O) in comparison with the xAOD model.
-While direct one-to-one comparisons are not possible given the inherent differences in data processing, the tests have been designed to be as close as possible.
-The benchmarks compare the same version of each cP tool, only use the \texttt{C++} code (no Python is involved so as to isolate the \texttt{C++} performance), and the time for the xAOD model includes the event store access overhead (which is per-event for the xAOD model and per-batch for the columnar model).
-The time for I/O and connecting columns is also not included in the performance comparisons, as this has not been optimized in the current tests and will not provide useful information, and so is excluded from the benchmark.
-The benchmarks show substantial speedups for the migrated tools with the columnar implementations ranging from being \emph{2-4x faster} than the xAOD interface.
-The specific reasons for the speedups are currently being investigated fully, but preliminary checks show a relation with EDM access (columnar tools need to access the EDM once per event batch).
+The development of the \texttt{v2} prototype of the columnar CP tools is ongoing and will continue to be publicly developed and benchmarked with future updates to the community from ATLAS.
+The \texttt{v1} and \texttt{v2} prototypes have already demonstrated that adopting a columnar implementation for the backend CP tools allows for a columnar analysis paradigm to be possible, and that the ongoing integration of \texttt{nanobind} bindings bridges the gap between \texttt{C++} and Python for high performance analysis while allowing freedom of Pythonic API design to allow for higher level analysis thinking by end users.
 
-ATLAS CP tools were created 10-15 years ago to run in an analysis framework.
-Battle tested, extremely well understood, excellent physics performance, strong desire to be maintained.
-Rewrite cost is currently too high across collaboration to move to \texttt{correctionlib} paradigm.
-Columnar cracks open ``black box'' implementations of tools for the new analysis model.
-Legacy code decisions highlight columnar prototype design decisions and opportunities during tool migration.
-Raises the question: ``What would it take to get to \texttt{python -m pip install atlascp}?''
-Columnar prototype explores these possibilities.
-Steps beyond: Modularization to level that allows packaging with \texttt{scikit-build-core}.
+When the ATLAS CP tools were created 10-15 years ago during Run 1, they were designed to be as framework independent as possible, be able to be run by themselves, and to interface with the ATLAS EDM.
+In the time since, they have been battle tested, and through through hundreds of analyses are now extremely well understood and provide excellent physics performance.
+This creates a strong desire in ATLAS to maintain these valuable tools and their existing functionality, making the rewrite cost of them to \texttt{correctionlib}~\cite{correctionlib_2024} paradigm currently too high.
+The addition of columnar support to the CP tools though requires cracking open the ``black box'' implementations of the tools for the new analysis model.
+Being confronted with legacy code decisions further highlights the columnar prototype design decisions and the design opportunities during the tool migrations.
+It also prompts for more ambitious questions to be raised, like what would be required to make the ATLAS CP tools a standalone \texttt{pip} or \texttt{conda} installable Python package?
+While this might seem like an ambition for Run 5 of the LHC or beyond, given the significant improvements in packaging technology in the Python ecosystem, like \texttt{scikit-build-core}~\cite{Schreiner_Scikit-build-core_2024}, this proposal is perhaps achievable on a significantly shorter time scale.
+Using this strategy, the ROOT team is currently researching the ability to distribute ROOT as a Python package~\cite{Padulano:CHEP_2024}.
+If these approaches are successful, it will allow for a greater level of modularity in the way ATLAS analyses are performed and a path towards greater interoperability with other tools as the ATALS CP tools will have become another viable tool in the broader PyHEP ecosystem.
