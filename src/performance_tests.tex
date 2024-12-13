@@ -1,6 +1,6 @@
 \section{Preliminary Performance Tests}\label{sec:performance}
 
-During the ongoing refactor for the \texttt{v2} prototype, preliminary integrated benchmarks have been created to measure the time spent in each tool per event (excluding I/O) in comparison with the xAOD model.
+During the ongoing refactor for the \texttt{v2} prototype, preliminary integrated benchmarks have been created to measure the time spent in each tool (excluding I/O) in comparison with the xAOD model.
 While direct one-to-one comparisons are not possible given the inherent differences in data processing, the tests have been designed to be as close as possible.
 The benchmarks compare the same version of each CP tool, only use the \texttt{C++} code (no Python is involved so as to isolate the \texttt{C++} performance), and the time for the xAOD model includes the event store access overhead (which is per-event for the xAOD model and per-batch for the columnar model).
 The time for I/O and connecting columns is also not included in the performance comparisons, as this has not been optimized in the current tests and will not provide useful information, and so is excluded from the benchmark.
