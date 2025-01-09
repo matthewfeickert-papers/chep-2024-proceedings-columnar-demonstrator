@@ -6,9 +6,9 @@ output_file = draft_$(date).pdf
 figure_src = $(wildcard figures/*.tex figures/*/*.tex)
 figure_list = $(figure_src:.tex=.pdf)
 
-# LATEX = pdflatex
+LATEX = pdflatex
 # LATEX = xelatex
-LATEX = lualatex
+# LATEX = lualatex
 
 BIBTEX = bibtex
 # BIBTEX = biber
