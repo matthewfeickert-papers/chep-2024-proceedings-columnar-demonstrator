@@ -1,3 +1,15 @@
-\section{Conclusions}\label{sec:conclusions}
+\section{Future Work and Decisions}\label{sec:conclusions}
 
-Great conclusions here.
+The development of the \texttt{v2} prototype of the columnar CP tools is ongoing and will continue to be publicly developed and benchmarked with future updates to the community from ATLAS.
+The \texttt{v1} and \texttt{v2} prototypes have already demonstrated that adopting a columnar implementation for the backend CP tools allows for a columnar analysis paradigm to be possible, and that the ongoing integration of \texttt{nanobind} bindings bridges the gap between \texttt{C++} and Python for high performance analysis while allowing freedom of Pythonic API design to allow for higher level analysis thinking by end users.
+This development is critical for a full columnar analysis ATLAS demonstrator that is able to interface fully with the scientific Python and PyHEP ecosystems.
+
+When the ATLAS CP tools were created 10-15 years ago during Run 1, they were designed to be as framework independent as possible, be able to be run by themselves, and to interface with the ATLAS EDM.
+In the time since, they have been battle tested, and through through hundreds of analyses are now extremely well understood and provide excellent physics performance.
+This creates a strong desire in ATLAS to maintain these valuable tools and their existing functionality, making the rewrite cost of them to a \texttt{correctionlib}~\cite{correctionlib_2024} paradigm currently too high.
+The addition of columnar support to the CP tools for the new analysis model though requires cracking open the ``black box'' implementations of the tools.
+Being confronted with legacy code decisions further highlights the columnar prototype design decisions and the design opportunities during the tool migrations.
+It also prompts more ambitious questions, like what would be required to make the ATLAS CP tools a standalone \texttt{pip} or \texttt{conda} installable Python package?
+While this might seem like an ambition for Run 5 of the LHC or beyond, given the significant improvements in packaging technology in the Python ecosystem, like \texttt{scikit-build-core}~\cite{Schreiner_Scikit-build-core_2024}, this proposal is perhaps achievable on a significantly shorter time scale.
+As an example, using this strategy, the ROOT team is currently researching the ability to distribute ROOT as a Python package~\cite{Padulano:CHEP_2024}.
+If these approaches are successful, it will allow for a greater level of modularity in the way ATLAS analyses are performed and a path towards greater interoperability with other tools as the ATALS CP tools will have become another viable tool in the broader PyHEP ecosystem.

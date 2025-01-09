@@ -1,4 +1,95 @@
 # c.f. https://gitlab.cern.ch/atlas-physics-office/atlaslatex/-/tree/master/bib?ref_type=heads
+
+# Required citation of the ATLAS detector
+@Article{PERF-2007-01,
+    author         = "{ATLAS Collaboration}",
+    title          = "{The ATLAS Experiment at the CERN Large Hadron Collider}",
+    journal        = "JINST",
+    volume         = "3",
+    year           = "2008",
+    pages          = "S08003",
+    doi            = "10.1088/1748-0221/3/08/S08003",
+    primaryClass   = "hep-ex",
+}
+
+# HL-LHC TDR
+@article{ZurbanoFernandez:2020cco,
+    author = "Zurbano Fernandez, I. and others",
+    editor = {B\'ejar Alonso, I. and Br\"uning, O. and Fessia, P. and Rossi, L. and Tavian, L. and Zerlauth, M.},
+    title = "{High-Luminosity Large Hadron Collider (HL-LHC): Technical design report}",
+    reportNumber = "CERN-2020-010",
+    doi = "10.23731/CYRM-2020-0010",
+    volume = "10/2020",
+    month = "12",
+    year = "2020",
+    journal= "CERN Yellow Reports: Monographs",
+    note = "\url{https://cds.cern.ch/record/2749422/}"
+}
+
+@article{ATLAS:2020pnm,
+    author = "{ATLAS Collaboration}",
+    title = "{ATLAS HL-LHC Computing Conceptual Design Report}",
+    reportNumber = "CERN-LHCC-2020-015, LHCC-G-178",
+    year = "2020",
+    note = "\url{https://cds.cern.ch/record/2729668}"
+}
+
+# https://iris-hep.org/docs/acknowledgements
+@Article{S2I2HEPSP,
+  author        = "Elmer, Peter and Neubauer, Mark and Sokoloff, Michael D.",
+  title         = "{Strategic Plan for a Scientific Software Innovation Institute (S2I2) for High Energy Physics}",
+  year          = "2017",
+  note          = "\url{https://arxiv.org/abs/1712.06592}",
+  archiveprefix = "arXiv",
+  eprint        = "1712.06592",
+  primaryclass  = "physics.comp-ph",
+  slaccitation  = "%%CITATION = ARXIV:1712.06592;%%",
+}
+
+@Article{CWPDOC,
+  author        = "Albrecht, Johannes and others",
+  journal       = "Comput. Softw. Big Sci.",
+  title         = "{A Roadmap for HEP Software and Computing R\&D for the 2020s}",
+  year          = "2019",
+  number        = "1",
+  pages         = "7",
+  volume        = "3",
+  archiveprefix = "arXiv",
+  collaboration = "HEP Software Foundation",
+  doi           = "10.1007/s41781-018-0018-8",
+  eprint        = "1712.06982",
+  primaryclass  = "physics.comp-ph",
+  reportnumber  = "HSF-CWP-2017-01, HSF-CWP-2017-001, FERMILAB-PUB-17-607-CD",
+}
+
+# IRIS-HEP AGC website
+@article{Held:2022sfw,
+    author = "Held, Alexander and Shadura, Oksana",
+    title = "{The IRIS-HEP Analysis Grand Challenge}",
+    doi = "10.22323/1.414.0235",
+    journal = "PoS",
+    volume = "ICHEP2022",
+    pages = "235",
+    month = "11",
+    year = "2022"
+}
+
+# Scikit-HEP paper
+@article{Rodrigues:2020syo,
+    author = "Rodrigues, Eduardo and others",
+    editor = "Doglioni, C. and Kim, D. and Stewart, G. A. and Silvestris, L. and Jackson, P. and Kamleh, W.",
+    title = "{The Scikit HEP Project -- overview and prospects}",
+    eprint = "2007.03577",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.comp-ph",
+    doi = "10.1051/epjconf/202024506028",
+    journal = "EPJ Web Conf.",
+    volume = "245",
+    pages = "06028",
+    year = "2020"
+}
+
+# Paper reference for PHYS and PHYSLITE
 @Article{SOFT-2022-02,
     author         = "{ATLAS Collaboration}",
     title          = "{Software and computing for Run~3 of the ATLAS experiment at the LHC}",
@@ -7,6 +98,26 @@
     eprint         = "2404.06335",
     archivePrefix  = "arXiv",
     primaryClass   = "hep-ex",
+    note = "\url{https://arxiv.org/abs/2404.06335}"
+}
+
+# Mariana's ICHEP 2024 proceedings
+@Booklet{ATL-OREACH-PROC-2024-005,
+    author        = "{ATLAS Collaboration}",
+    title         = "{The First Release of ATLAS Open Data for Research}",
+    howpublished  = "ATL-OREACH-PROC-2024-005",
+    url           = "https://cds.cern.ch/record/2911158",
+    year          = "2024",
+}
+
+# THIS SHOULD GET UPDATED IN THE FINAL VERSION
+@Booklet{Marshall:2919097,
+      author        = "Marshall, Zach and Vivas Albornoz, Mariana Isabel and
+                       Heinrich, Lukas Alexander and Willocq, Stephane",
+      title         = "{The First Release of ATLAS Open Data for Research}",
+      howpublished  = "ATL-COM-SOFT-2024-115",
+      url           = "https://cds.cern.ch/record/2919097",
+      year          = "2024",
 }
 
 ATLAS Collaboration, ATLAS Software and Computing HL-LHC Roadmap,
@@ -21,9 +132,186 @@ CERN-LHCC-2022-005, 2022, url: http://cds.cern.ch/record/2802918.
       url           = "https://cds.cern.ch/record/2802918",
 }
 
+% PHYSLITE CHEP 2023 proceedings
+% https://inspirehep.net/literature/2785115
+@article{Schaarschmidt:2024vzr,
+    author = "Schaarschmidt, Jana and Catmore, James and Elmsheuser, Johannes and Heinrich, Lukas and Krumnack, Nils and Mete, Serhan and Ozturk, Nurcan",
+    title = "{PHYSLITE - A new reduced common data format for ATLAS}",
+    doi = "10.1051/epjconf/202429506017",
+    journal = "EPJ Web Conf.",
+    volume = "295",
+    pages = "06017",
+    year = "2024",
+    note = "\url{https://cds.cern.ch/record/2870350/}"
+}
+
+@misc{Awkward_Array_2018,
+  author = {Pivarski, Jim and Osborne, Ianna and Ifrim, Ioana and Schreiner, Henry and Hollands, Angus and Biswas, Anish and Das, Pratyush and Roy Choudhury, Santam and Smith, Nicholas and Goyal, Manasvi},
+  doi = {10.5281/zenodo.4341376},
+  month = oct,
+  title = {{Awkward Array}},
+  year = {2018},
+  url = {https://doi.org/10.5281/zenodo.4341376},
+}
+
+@misc{Uproot_2017,
+  author = {Pivarski, Jim and Schreiner, Henry and Hollands, Angus and Das, Pratyush and Kothari, Kush and Roy, Aryan and Ling, Jerry and Smith, Nicholas and Burr, Chris and Stark, Giordon},
+  doi = {10.5281/zenodo.4340632},
+  month = sep,
+  title = {{Uproot}},
+  year = {2017},
+  url = {https://doi.org/10.5281/zenodo.4340632},
+}
+
+@misc{Coffea_2023,
+    author = {Gray, Lindsey and Smith, Nicholas and Novak, Andrzej and Fackeldey, Peter and Tovar, Benjamin and Chen, Yi-Mu and Watts, Gordon and Krommydas, Iason},
+    doi = {10.5281/zenodo.3266454},
+    month = mar,
+    title = {{coffea}},
+    url = {https://doi.org/10.5281/zenodo.3266454},
+    year = {2023}
+}
+
+# Coffea paper
+@article{CMS:2020kpn,
+    author = "Smith, Nicholas and others",
+    editor = "Doglioni, C. and Kim, D. and Stewart, G. A. and Silvestris, L. and Jackson, P. and Kamleh, W.",
+    collaboration = "CMS",
+    title = "{Coffea: Columnar Object Framework For Effective Analysis}",
+    eprint = "2008.12712",
+    archivePrefix = "arXiv",
+    primaryClass = "cs.DC",
+    reportNumber = "FERMILAB-CONF-20-494-CMS-SCD, CMS-CR-2020-069",
+    doi = "10.1051/epjconf/202024506012",
+    journal = "EPJ Web Conf.",
+    volume = "245",
+    pages = "06012",
+    year = "2020"
+}
+
+@misc{funcadl_2024,
+    author = {Gordon Watts},
+    title = {{func-adl}},
+    url = {https://github.com/iris-hep/func_adl},
+    year = {2024}
+}
+
+# func-adl paper
+@article{Proffitt:2021wfh,
+    author = "Proffitt, Mason and Watts, Gordon",
+    title = "{FuncADL: Functional Analysis Description Language}",
+    eprint = "2103.02432",
+    archivePrefix = "arXiv",
+    primaryClass = "physics.data-an",
+    doi = "10.1051/epjconf/202125103068",
+    journal = "EPJ Web Conf.",
+    volume = "251",
+    pages = "03068",
+    year = "2021"
+}
+
+@misc{serviceX_2024,
+    author = "Galewsky, Ben and Eckart, Andrew and Watts, Gordon and Thapa, Suchandra and Onyisi, Peter and Weinberg, Marc and Vukotic, Ilija",
+    title = {{ServiceX}},
+    url = {https://github.com/ssl-hep/ServiceX},
+    year = {2024}
+}
+
+@misc{serviceX_client_2024,
+    author = "Watts, Gordon and Choi, KyungEon and Onyisi, Peter and Mahajan, Ketan and Galewsky, Ben and Feickert, Matthew",
+    title = {{ServiceX Client Library}},
+    url = {https://github.com/ssl-hep/ServiceX_frontend},
+    year = {2024}
+}
+
+# serviceX paper
+@article{Galewsky:2020xig,
+    author = "Galewsky, B. and Gardner, R. and Gray, L. and Neubauer, M. and Pivarski, J. and Proffitt, M. and Vukotic, I. and Watts, G. and Weinberg, M.",
+    editor = "Doglioni, C. and Kim, D. and Stewart, G. A. and Silvestris, L. and Jackson, P. and Kamleh, W.",
+    title = "{ServiceX A Distributed, Caching, Columnar Data Delivery Service}",
+    reportNumber = "FERMILAB-CONF-20-767-SCD",
+    doi = "10.1051/epjconf/202024504043",
+    journal = "EPJ Web Conf.",
+    volume = "245",
+    pages = "04043",
+    year = "2020"
+}
+
+# ROOT
+@article{Brun:1997pa,
+    author = "Brun, R. and Rademakers, F.",
+    editor = "Werlen, M. and Perret-Gallix, D.",
+    title = "{ROOT: An object oriented data analysis framework}",
+    doi = "10.1016/S0168-9002(97)00048-X",
+    journal = "Nucl. Instrum. Meth. A",
+    volume = "389",
+    pages = "81--86",
+    year = "1997"
+}
+
+@misc{Vigl:ACAT_2024,
+    author = "Feickert, Matthew and Hartman, Nikolai and Heinrich, Lukas and Held, Alexander and Kourlitis, Vangelis and Krumnack, Nils and Stark, Giordon and Vigl, Matthias and Watts, Gordon",
+    title = "{Using Legacy ATLAS C++ Calibration Tools in Modern Columnar Analysis Environments}",
+    url = {https://indico.cern.ch/event/1330797/contributions/5796636/},
+    year = "2024",
+    note = "22nd International Workshop on Advanced Computing and Analysis Techniques in Physics Research (ACAT 2024)"
+}
+
 @misc{nanobind,
    author = {Wenzel Jakob},
+   title = "{nanobind: tiny and efficient C++/Python bindings}",
    year = {2022},
-   note = {https://github.com/wjakob/nanobind},
-   title = {nanobind: tiny and efficient C++/Python bindings}
+   url = {https://github.com/wjakob/nanobind}
+}
+
+@misc{dask_awkward_2024,
+    author = "Davis, Douglas and Gray, Lindsey and Durant, Martin and Hollands, Angus",
+    title = {{dask-awkward}},
+    url = {https://github.com/dask-contrib/dask-awkward},
+    year = {2024}
+}
+
+@misc{ATLAS_Athena,
+    author = "{ATLAS Collaboration}",
+    title = {{Athena}},
+    url = {https://gitlab.cern.ch/atlas/athena},
+    year = {2023}
+}
+
+@misc{columnar_athena,
+    author = "{ATLAS Collaboration}",
+    title = {{Columnar Athena}},
+    url = {https://gitlab.cern.ch/atlas-asg/columnar-athena},
+    year = {2024}
+}
+
+@misc{correctionlib_2024,
+    author = "{Nicholas Smith}",
+    title = {{correctionlib}},
+    url = {https://github.com/cms-nanoAOD/correctionlib},
+    year = {2024}
+}
+
+@inproceedings{Schreiner_Scikit-build-core_2024,
+author = {Schreiner, III, Henry and Fillion-Robin, Jean-Christophe and McCormick, Matt},
+doi = {10.25080/FMKR8387},
+month = jul,
+series = {SciPy 2024},
+title = {{Scikit-build-core}},
+year = {2024},
+url = {https://doi.org/10.25080/FMKR8387}
+}
+
+@Booklet{Padulano:CHEP_2024,
+      author        = "{Vincenzo Eduardo Padulano}",
+      title         = "{pip install ROOT: experiences making a complex multi-language package accessible for Python users}",
+      url           = "https://indico.cern.ch/event/1338689/contributions/6010410/",
+      year          = "2024",
+}
+
+@misc{US_ATLAS_IRISHEP_trainging:2024,
+    author = {Choi, KyungEon and Feickert, Matthew and Gray, Lindsey and Held, Alexander and Kourlitis, Vangelis and Peixoto, Ana and Pivarski, Jim and Shadura, Oksana and Watts, Gordon},
+    title = {{US ATLAS / IRIS-HEP Analysis Software Training Event 2024}},
+    url = {https://indico.cern.ch/event/1376945/},
+    year = {2024}
 }
