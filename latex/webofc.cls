@@ -16,8 +16,8 @@
 %%   Right bracket \]     Circumflex    \^     Underscore    \_
 %%   Grave accent  \`     Left brace    \{     Vertical bar  \|
 %%   Right brace   \}     Tilde         \~}
-\def\filedate{2016/04/05}
-\def\fileversion{2.0}
+\def\filedate{2024/04/25}
+\def\fileversion{2.1}
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 \ProvidesClass{webofc}
               [\filedate\space v\fileversion\space
@@ -173,6 +173,39 @@
 \RequirePackage{xspace}
 \woc@language
 %
+%
+\RequirePackage[%
+  \ifnum\pdfoutput=\z@
+    dvips,
+  \else
+    pdftex,
+  \fi
+  unicode=true,
+  \if@online
+    bookmarks=true,
+  \else
+    bookmarks=false,
+  \fi
+  \ifnum\pdfoutput=\z@
+    breaklinks=true,
+  \fi
+  bookmarksnumbered=false, pdftoolbar=true,
+  pdfmenubar=true, pdftitle=, pdfauthor=, pdfnewwindow=true,
+  pdfstartview={FitH 1000},
+  \if@online
+    colorlinks=true,
+    linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue
+  \else
+    colorlinks=false,
+    linkcolor=black, citecolor=black, filecolor=black, urlcolor=black
+  \fi
+]
+{hyperref}
+\ifnum\pdfoutput=\z@
+\RequirePackage[hyphenbreaks]{breakurl}
+\fi
+\RequirePackage{doiEDPS}
+\let\doiwoc\doiEDPS
 %%%%%%%%%%%%%%%%%
 %%% Registers %%%
 %%%%%%%%%%%%%%%%%
