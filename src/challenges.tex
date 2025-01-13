@@ -2,7 +2,7 @@
 
 Data access becomes challenging when all branches of a PHYSLITE file (including those with custom objects) need to be read and once systematics need to be handled.
 As columnar analysis processes events in batches, this requires that the ATLAS Combined Performance (CP) tools and algorithms must also be able to operate on data in batches and have the appropriate interfaces.
-The current Run 3 model for CP tools is to operate on the ATLAS xAOD event data model (EDM) for all the calculations per event and then to write the systematics to disk for future access.~\cite{SOFT-2022-02}
+The current Run 3 model for CP tools is to operate on the ATLAS xAOD event data model (EDM) for all the calculations per event and then to write the systematics to disk for future access~\cite{SOFT-2022-02}.
 This process is I/O intensive and computationally inefficient, but has excellent physics performance and configurability for the current ATLAS analysis model.
 As a data access layer the xAOD interface also makes assumptions about the underlying I/O layer, memory model, and processing environment, which do not match well to the expectations of columnar frameworks.
 The challenge for a fully columnar CP tool framework is to adapt to the on-the-fly computation of the columnar paradigm --- furthering the ``trade disk for compute'' strategy --- while still being performant enough to not be a bottleneck.
@@ -15,7 +15,7 @@ The API design ability is quite powerful, as it allows for unification of interf
 \begin{figure}
     \centering
     \includegraphics[width=\textwidth]{columnar_cp_tools_diagram.png}
-    \caption{Cartoon of the data interface layers for the Pythonic interface to the columnar CP tools.~\cite{Vigl:ACAT_2024}
+    \caption{Cartoon of the data interface layers for the Pythonic interface to the columnar CP tools~\cite{Vigl:ACAT_2024}.
 The user is presented with a high-level Pythonic API for operating on columns of PHYSLITE data (e.g. as NumPy or Awkward arrays) that has a similar design to common Python array libraries.
 Through \texttt{nanobind} zero-copy buffers, the data columns are passed directly to the performant \texttt{C++} columnar CP tools for computation, and the results are returned to the user level as transformed arrays.}
     \label{fig:columnar_cp_tools_diagram}
