@@ -13,7 +13,7 @@ Integrating PHYSLITE data access with the Python analysis ecosystem presents uni
 However, the Awkward Array~\cite{Awkward_Array_2018} library supports ``behaviors'' which allow for efficiently reinterpreting data structures on the fly, and can be used by Uproot~\cite{Uproot_2017} for I/O of custom serializations (e.g. PHYSLITE).
 Through contributions by ATLAS members large amounts of PHYSLITE are now supported by both Uproot and Coffea~\cite{Coffea_2023,CMS:2020kpn} which allows for most workflows to proceed with small alterations~\cite{US_ATLAS_IRISHEP_trainging:2024}.
 This allows for the demonstrator workflow to operate on most PHYSLITE files directly with Uproot, as seen in \Cref{fig:atlas-pipeline}.
-For data in the PHYS ATLAS Run 3 Analysis Model data format~\cite{SOFT-2022-02}, FuncADL~\cite{funcadl_2024,Proffitt:2021wfh} and ServiceX~\cite{serviceX_2024,serviceX_client_2024,Galewsky:2020xig} can be used to create a distributed ROOT~\cite{Brun:1997pa} data transformation service to read the data and perform calibrations.
+For files in the PHYS ATLAS Run 3 Analysis Model data format~\cite{SOFT-2022-02}, FuncADL~\cite{funcadl_2024,Proffitt:2021wfh} and ServiceX~\cite{serviceX_2024,serviceX_client_2024,Galewsky:2020xig} can be used to create a distributed ROOT~\cite{Brun:1997pa} data transformation service to read the data and perform calibrations.
 The result of the transform is an in-memory columnar representation equivalent to if the column had been read from PHYSLITE.
 As PHYSLITE already contains all of the calibrated physics objects, it is preferable to use PHYSLITE whenever possible.
 
