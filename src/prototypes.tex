@@ -1,7 +1,7 @@
 \section{Columnar CP Prototypes}\label{sec:prototypes}
 
-As a first (\texttt{v1}) prototype of this capability, a standalone columnar implementation of the ATLAS Egamma CP tool with zero-copy \texttt{nanobind} Python bindings was created to compute on-the-fly systematics variations for the dilepton system mass in $e^{+}e^{-}$ final states.
-Uproot was used to load PHYSLITE files of ATLAS $Z\to \ell\ell$ simulation into Awkward arrays, and the $e^{+}e^{-}$ event selections were applied with Coffea.
+As a first (\texttt{v1}) prototype of this capability, a standalone columnar implementation of the ATLAS electron and photon (Egamma) CP tool with zero-copy \texttt{nanobind} Python bindings was created to compute on-the-fly systematics variations for the dilepton system mass in $e^{+}e^{-}$ final states.
+Uproot was used to load ATLAS $Z\to \ell\ell$ simulation PHYSLITE files into Awkward arrays, and the $e^{+}e^{-}$ event selections were applied with Coffea.
 The columnar Egamma tool was initialized through the Pythonic interface, \texttt{atlascp.EgammaTools}, and then passed Awkward arrays of electrons to compute on-the-fly systematic variations of the electron reconstruction efficiency scale factors and energy correction resolution and scale, from which the corrected dilepton mass was computed.
 The computations were additionally scaled out with \texttt{dask-awkward}~\cite{dask_awkward_2024} on the University of Chicago ATLAS Analysis Facility to minimize the compute wall time, with the gathered results visualized in~\Cref{fig:Zee_mc_systematics}.
 
