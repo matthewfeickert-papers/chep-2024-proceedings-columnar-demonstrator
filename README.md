@@ -6,3 +6,4 @@ Source for the [Building a Columnar Analysis Demonstrator for ATLAS PHYSLITE Ope
 * Proceedings draft submitted to the ATLAS Collaboration for review as [ATL-COM-SOFT-2024-130](https://cds.cern.ch/record/2919696) on 2024-12-12.
 * Proceedings draft accepted by the ATLAS Collaboration as [ATL-SOFT-PROC-2025-025](https://cds.cern.ch/record/2923872) on 2025-02-09.
 * Submitted to CHEP 2024 for review on 2025-02-09.
+* Approved for publication as CHEP 2024 proceedings on 2025-04-04.
